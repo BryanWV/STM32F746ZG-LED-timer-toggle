@@ -18,7 +18,7 @@ void Init()
     // Reference Manual - Page 208
 
 
-    /* Configue General Purpose Timers */
+    /* Configure General Purpose Timers */
 
 
     RCC->APB2ENR |= 0x20000; // TIM10 Peripheral Clock Enable
@@ -43,11 +43,16 @@ void Init()
         * time_base_required is the time desired (in this case is 1 second)
         * PSC and ARR are a 16 bit value
         * TIMx_CLK (in Hz) is the clock signal for the timer. (In this case it is the same as the System Clock source so its 16E+6 Hz)
-        TODO:* For convinience, select a value for PSC until the ARR has a value within the range
+        * PSC and ARR control the timer's behavior:
+        * The ARR defines the maximum counter value will count to. When counter reaches the ARR value the counter resets to 0. If the counter is down counting, the counter resets to the ARR value
+        * The prescaler divides the timer frequency, slowing down the timer clock.
+        * So it means the timer will count at the ftimer value
+        * . Its formula is:
+        ftimer=fSYS_CLK/(PSC+1)
+        => PSC=fSYS_CLK/(ftimer) - 1
+        *
 
-        Functions:
-        TODO: rectify info
-        * The ARR Register limits the value
+
     */
 
     TIM10->PSC |=  500; // Prescaler register
