@@ -13,8 +13,3 @@ There are a total of 16 timers, but it was chosen the timer 10, just because... 
 This timer is a general purpose timer with a 16 bit (from 1 to 65536) programmable prescaler. (Reference Manual - page 859) <br>
 ### LEDs
 There are only 3 User LEDs in the microcontroller, and for convenience the LED 2 is chosen for this project <br>
-
-
-
-    
-

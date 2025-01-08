@@ -50,9 +50,6 @@ void Init()
         * . Its formula is:
         ftimer=fSYS_CLK/(PSC+1)
         => PSC=fSYS_CLK/(ftimer) - 1
-        *
-
-
     */
 
     TIM10->PSC |=  500; // Prescaler register
@@ -73,6 +70,7 @@ int main()
                 TIM10->SR &= ~(1 << 0);
                 GPIOB->ODR ^= (1 << 7); // Toggle the LED B7
             }
+
 
     }
 
