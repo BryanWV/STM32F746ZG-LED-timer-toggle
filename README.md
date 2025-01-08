@@ -3,8 +3,8 @@ Project using STM32F746ZG microcontroller and PlatformIO. <br>
 Framework: CMSIS <br>
 Purpose: Create a timer-based LED toogle. <br>
 ## Acknoledgement
-https://www.st.com/en/microcontrollers-microprocessors/stm32f746zg.html <br>
-
+- [Description & Features](https://www.st.com/en/microcontrollers-microprocessors/stm32f746zg.html) <br>
+- [Pinout](https://os.mbed.com/platforms/ST-Nucleo-F746ZG/) <br>
 ## Explanation (Step by step)
 ### Requirements
 As it is going to be used a LED User and a timer, the Port where the LED is located must be configured (Reference Manual - page 163), in addition the timer needs to be enabled. <br>
